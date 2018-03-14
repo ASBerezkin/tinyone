@@ -1,0 +1,190 @@
+$main-color: #fcdb00;
+$dop-color: #898989;
+$dop-color-dark: #010101;
+$dop-color-dark-2: #313841;
+$dop-color-dark-3: #555;
+
+html {
+	box-sizing: border-box;
+	font-size: 10px;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+h1,h2,h3,h4,h5,h6,p,ul,dl,dt,dd {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'PT Sans', sans-serif;
+}
+.title {
+	font-size: 3.2rem;
+	font-weight: bold;
+	color: $dop-color-dark;
+}
+.sub-title {
+	margin-top: 2.7rem;
+	font-size: 2rem;
+	font-weight: 100;
+	color: $dop-color-dark-2;
+}
+.text {
+	margin-top: 2.7rem;
+	font-size: 1.6rem;
+	color: $dop-color-dark-3;
+}
+.header {
+	background-color: $main-color;
+	&__top-line {
+		padding-top: 1rem;
+	}
+	&__logo {
+		line-height: 8.65rem;
+	}
+	&__menu {
+		display: block;
+		line-height: 5.65rem;
+		menu {
+			li {
+				list-style-type: none;
+				display: inline-block;
+				margin-right: 7.3rem;
+				&:last-child {
+					margin-right: 0;
+				}
+				a {
+					color: $dop-color-dark;
+					font-weight: bold;
+					font-size: 2.2rem;
+					// transition: all linear .4s;
+					&:hover {
+						// text-decoration: none;
+						// color: $dop-color-dark;
+					}
+				}
+			}
+		}
+	}
+	&__slider {
+		margin-top: 7.1rem;
+		padding-bottom: 10.8rem;
+		.slider {
+			&__left-side {
+				padding-left: 1rem;
+				.sub-title {
+					// margin-top: 2.7rem;
+				}
+			}
+			&__social {
+				margin-top: 4.7rem;
+				ul {
+					li {
+						list-style-type: none;
+						display: inline-block;
+						margin-right: 4rem;
+						&:last-child {
+							margin-top: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.main {
+	margin-top: 10.7rem;
+	&__title {
+		text-align: center;
+	}
+	&__features {
+		margin-top: 9.5rem;
+		.row:nth-child(2) {
+			margin-top: 5rem;
+		}
+	.text {
+		margin-top: 2.2rem;
+	}
+		.features {
+			&__icon {
+				display: block;
+				width: 5.5rem;
+				height: 5.5rem;
+				text-align: right;
+				background-image: url('../img/icons-sprite.png');
+				background-repeat: no-repeat;
+
+				&-1 {
+					background-position: 16px 0;
+				}
+				&-2 {
+					background-position: -54px 0;
+				}
+				&-3 {
+					background-position: -118px 0;
+				}
+				&-4 {
+					background-position: -2px -61px;
+				}
+				&-5 {
+					background-position: -62px -63px;
+				}
+				&-6 {
+					background-position: -116px -63px;
+				}
+			}
+			&__title {
+				font-size: 2.2rem;
+				color: $dop-color-dark;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
