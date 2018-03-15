@@ -1,8 +1,5 @@
-$main-color: #fcdb00;
-$dop-color: #898989;
-$dop-color-dark: #010101;
-$dop-color-dark-2: #313841;
-$dop-color-dark-3: #555;
+@import '_colors.scss';
+@import '_media.scss';
 
 html {
 	box-sizing: border-box;
@@ -11,12 +8,12 @@ html {
 *, *:before, *:after {
 	box-sizing: inherit;
 }
+body {
+	font-family: 'PT Sans', sans-serif;
+}
 h1,h2,h3,h4,h5,h6,p,ul,dl,dt,dd {
 	margin: 0;
 	padding: 0;
-}
-body {
-	font-family: 'PT Sans', sans-serif;
 }
 img {
 	max-width: 100%;
@@ -48,18 +45,55 @@ img {
 	&__menu {
 		display: block;
 		line-height: 5.65rem;
-		menu {
-			li {
-				list-style-type: none;
-				display: inline-block;
-				margin-right: 7.3rem;
-				&:last-child {
-					margin-right: 0;
+		.mobile-ico {
+			display: inline-block;
+			cursor: pointer;
+			position: absolute;
+			right: 15px;
+			top: 2.5rem;
+			&__item {
+				display: none;
+				width: 35px;
+				height: 5px;
+				background-color: $dop-color-dark;
+				margin: 6px 0;
+				transition: 0.4s;
+				@include media (xs-phones) {
+					display: block;
 				}
-				a {
-					color: $dop-color-dark;
-					font-weight: bold;
-					font-size: 2.2rem;
+			}
+		}
+/* Rotate first bar */
+.change .mobile-ico__item-1 {
+	-webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+	transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.change .mobile-ico__item-2 {
+	opacity: 0;
+}
+
+/* Rotate last bar */
+.change .mobile-ico__item-3 {
+	-webkit-transform: rotate(45deg) translate(-9px, -7px) ;
+	transform: rotate(45deg) translate(-9px, -7px) ;
+}
+menu {
+	li {
+		list-style-type: none;
+		display: inline-block;
+		margin-right: 7.3rem;
+		@include media (xs-phones) {
+			display: none;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+		a {
+			color: $dop-color-dark;
+			font-weight: bold;
+			font-size: 2.2rem;
 					// transition: all linear .4s;
 					&:hover {
 						// text-decoration: none;
@@ -172,8 +206,8 @@ img {
 			list-style-type: none;
 		}
 		a {
-				color: #fff;
-			}
+			color: #fff;
+		}
 	}
 }
 input[type="text"] {
