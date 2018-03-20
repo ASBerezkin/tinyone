@@ -2,8 +2,8 @@
 
 	$device-custom-iphone-xs: "(min-width: 320px)";
 	$device-xs-phones: "(max-width: 480px)";
-	$device-sm-tablets: "(min-width: 768px)";
-	$device-md-desctop: "(min-width: 992px)";
+	$device-sm-tablets: "(max-width: 768px)";
+	$device-md-desctop: "(max-width: 992px)";
 	$device-lg-wide-screen: "(min-width: 1200px)";
 
 	@if $point == custom-iphone-xs {
@@ -22,7 +22,3 @@
 		@media only screen and #{$device-lg-wide-screen} { @content; }
 	}
 }
-
-// @include media (custom-iphone-xs) {
-// 		background-color: #fff;
-// 	}

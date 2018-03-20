@@ -2,3 +2,15 @@
 /tinyone
 css/bootstrap
 *css.map
+csscomb.json
+js/slick-1.8.0/.gitignore
+js/slick-1.8.0/CONTRIBUTING.markdown
+js/slick-1.8.0/ISSUE_TEMPLATE.md
+js/slick-1.8.0/LICENSE
+js/slick-1.8.0/Makefile
+js/slick-1.8.0/README.markdown
+js/slick-1.8.0/bower.json
+js/slick-1.8.0/component.json
+js/slick-1.8.0/index.html
+js/slick-1.8.0/package.json
+js/slick-1.8.0/slick.jquery.json

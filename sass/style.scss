@@ -11,7 +11,7 @@ html {
 body {
 	font-family: 'PT Sans', sans-serif;
 }
-h1,h2,h3,h4,h5,h6,p,ul,dl,dt,dd {
+h1,h2,h3,h4,h5,h6,p,ul,dl,dt,dd,menu {
 	margin: 0;
 	padding: 0;
 }
@@ -46,13 +46,16 @@ img {
 		display: block;
 		line-height: 5.65rem;
 		.mobile-ico {
-			display: inline-block;
+			display: none;
 			cursor: pointer;
 			position: absolute;
 			right: 15px;
 			top: 2.5rem;
+			@include media (sm-tablets) {
+				display: block;
+			}
 			&__item {
-				display: none;
+				display: block;
 				width: 35px;
 				height: 5px;
 				background-color: $dop-color-dark;
@@ -64,6 +67,13 @@ img {
 			}
 		}
 /* Rotate first bar */
+.change {
+	// position: fixed;
+	// right: 24px;
+	top: 35px;
+	z-index: 2;
+	position: fixed;
+}
 .change .mobile-ico__item-1 {
 	-webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
 	transform: rotate(-45deg) translate(-9px, 6px) ;
@@ -80,12 +90,32 @@ img {
 	transform: rotate(45deg) translate(-9px, -7px) ;
 }
 menu {
+	line-height: 90px;
+	@include media (sm-tablets) {
+		display: block;
+		position: fixed;
+		right: 0;
+		top: 0;
+		padding-left: 0px;
+		padding-top: 25px;
+		background-color: rgba(255,255,255, 0.9);
+		height: 100%;
+		width: 0%;
+		transition: width ease 0.4s;
+		z-index: 1;
+		overflow-x: hidden;
+		line-height: 50px;
+	}
 	li {
 		list-style-type: none;
 		display: inline-block;
+		// display: none;
 		margin-right: 7.3rem;
-		@include media (xs-phones) {
-			display: none;
+		// @include media (xs-phones) {
+		// 	display: none;
+		// }
+		@include media (sm-tablets) {
+			display: block;
 		}
 		&:last-child {
 			margin-right: 0;
@@ -102,6 +132,16 @@ menu {
 				}
 			}
 		}
+		.open {
+			width: 100%;
+			padding-left: 15px;
+			transition: 0.4s;
+			li {
+				@include media (sm-tablets) {
+					display: block;
+				}
+			}
+		}
 	}
 	&__slider {
 		margin-top: 7.1rem;
@@ -113,8 +153,19 @@ menu {
 					// margin-top: 2.7rem;
 				}
 			}
+			&__right-side {
+				@include media (xs-phones) {
+					text-align: center;
+				}
+				img {
+					display: inline-block;
+				}
+			}
 			&__social {
 				margin-top: 4.7rem;
+				@include media (xs-phones) {
+					text-align: center;
+				}
 				ul {
 					li {
 						list-style-type: none;
@@ -136,6 +187,9 @@ menu {
 	}
 	&__features {
 		margin-top: 9.5rem;
+		@include media (sm-tablets) {
+			text-align: center;
+		}
 		.row:nth-child(2) {
 			margin-top: 5rem;
 		}
@@ -150,9 +204,12 @@ menu {
 				text-align: right;
 				background-image: url('../img/icons-sprite.png');
 				background-repeat: no-repeat;
-
+				overflow-x: hidden;
+				@include media (sm-tablets) {
+					margin: 2rem auto;
+				}
 				&-1 {
-					background-position: 16px 0;
+					background-position: 10px 0;
 				}
 				&-2 {
 					background-position: -54px 0;
