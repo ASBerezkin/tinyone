@@ -2,6 +2,7 @@
 /tinyone
 css/bootstrap
 *css.map
+
 csscomb.json
 js/slick-1.8.0/.gitignore
 js/slick-1.8.0/CONTRIBUTING.markdown

@@ -147,6 +147,11 @@ menu {
 		margin-top: 7.1rem;
 		padding-bottom: 10.8rem;
 		.slider {
+			&-item {
+				@include media (sm-tablets) {
+					text-align: center;
+				}
+			}
 			&__left-side {
 				padding-left: 1rem;
 				.sub-title {
@@ -162,7 +167,7 @@ menu {
 				}
 			}
 			&__social {
-				margin-top: 4.7rem;
+				margin: 4.7rem 0;
 				@include media (xs-phones) {
 					text-align: center;
 				}
@@ -171,8 +176,14 @@ menu {
 						list-style-type: none;
 						display: inline-block;
 						margin-right: 4rem;
+						@include media (xs-phones) {
+							margin: 0 25px;
+						}
 						&:last-child {
-							margin-top: 0;
+							margin-right: 0;
+							@include media (xs-phones) {
+								margin: 0 25px;
+							}
 						}
 					}
 				}
@@ -243,6 +254,9 @@ menu {
 		padding-top: 9.7rem;
 		.title {
 			color: $main-color;
+			@include media (custom-iphone-xs) {
+				font-size: 3rem;
+			}
 		}
 		.sub-title {
 			color: $dop-color;
@@ -289,6 +303,7 @@ input[type="submit"] {
 	font-size: 1.6rem;
 	color: $dop-color-dark;
 	transition: all ease 0.3s;
+	margin-top: 1rem;
 	&:hover {
 		text-decoration: underline;
 	}
